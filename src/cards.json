@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "name": "Chase",
+    "image": "assets/images/badge-1.png",
+    "type": "badge"
+  },
+  {
+    "id": 2,
+    "name": "Skye",
+    "image": "assets/images/badge-2.png",
+    "type": "badge"
+  },
+  {
+    "id": 3,
+    "name": "Rocky",
+    "image": "assets/images/badge-3.png",
+    "type": "badge"
+  },
+  {
+    "id": 4,
+    "name": "Rubble",
+    "image": "assets/images/badge-4.png",
+    "type": "badge"
+  },
+  {
+    "id": 5,
+    "name": "Marshall",
+    "image": "assets/images/badge-5.png",
+    "type": "badge"
+  },
+  {
+    "id": 6,
+    "name": "Zuma",
+    "image": "assets/images/badge-6.png",
+    "type": "badge"
+  }
+]

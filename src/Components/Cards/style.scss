@@ -1,0 +1,21 @@
+.card {
+
+    &__wrapper {
+        max-width: 18rem;
+        width: 33.33%;
+        background-color: yellow;
+        // padding: auto;
+        // margin: auto;
+    }
+    &__title {
+        font-weight: bold;
+        color: blue;
+    }
+
+    &__image {
+        max-width: 18rem;
+        width: 80%;
+        margin: auto;
+
+    }
+}
