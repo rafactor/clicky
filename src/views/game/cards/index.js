@@ -3,11 +3,11 @@ import "./style.scss"
 
 export default function Card(props){
         return (
-        <div className="card__wrapper order-3" onClick={() => {
-            alert(props.id)
-        }}>
-            <img src={props.image} alt={props.name} className="card__image" />
-        </div>
+        // <div className={`clicky-card__wrapper clicky-card__wrapper--${props.color} order-3`} 
+        <div className={`clicky-card clicky-card--${props.color}`} onClick={() => {
+                console.log(props.id)
+            }}><span className="clicky-card__text">{props.color}</span></div>
+        // </div>
         )
     
 }

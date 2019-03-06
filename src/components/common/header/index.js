@@ -1,5 +1,8 @@
 import React, { Component } from "react";
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import { 
+  // BrowserRouter as Router, 
+  // Route, 
+  Link } from "react-router-dom";
 
 import "./style.scss"
 
@@ -22,7 +25,7 @@ export default class Header extends Component {
             <div className="collapse navbar-collapse" id="navbarNav">
               <ul className="navbar-nav mr-auto">
                 <li className="nav-item active">
-                <Link to="/about">About</Link>
+                {/* <Link to="/about">About</Link> */}
                   {/* <a className="nav-link" href="#">About <span className="sr-only">(current)</span></a> */}
                 </li>
                 <li className="nav-item">
@@ -34,16 +37,10 @@ export default class Header extends Component {
                   {/* <a className="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Profile</a> */}
                 </li>
               </ul>
-              <span class="navbar-text">
+              <span className="navbar-text">
               <Link to="/login">Login</Link>
               </span>
             </div>
-
-            {/* <Route exact path="/" component={Game} />
-            <Route path="/login" component={Login} />
-            <Route path="/about" component={About} />
-            <Route path="/score" component={Score} />
-            <Route path="/profile" component={Profile} /> */}
           </nav>
         )
     }

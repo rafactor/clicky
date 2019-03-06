@@ -1,38 +1,27 @@
 [
   {
     "id": 1,
-    "name": "Chase",
-    "image": "assets/images/badge-1.png",
-    "type": "badge"
+    "color": "blue"
   },
   {
     "id": 2,
-    "name": "Skye",
-    "image": "assets/images/badge-2.png",
-    "type": "badge"
+    "color": "red"
   },
   {
     "id": 3,
-    "name": "Rocky",
-    "image": "assets/images/badge-3.png",
-    "type": "badge"
+    "color": "yellow"
   },
   {
     "id": 4,
-    "name": "Rubble",
-    "image": "assets/images/badge-4.png",
-    "type": "badge"
+    "color": "orange"
   },
   {
     "id": 5,
-    "name": "Marshall",
-    "image": "assets/images/badge-5.png",
-    "type": "badge"
+    "color": "green"
   },
   {
     "id": 6,
-    "name": "Zuma",
-    "image": "assets/images/badge-6.png",
-    "type": "badge"
+    "color": "purple"
   }
 ]
+
