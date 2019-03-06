@@ -1,22 +1,30 @@
 import React, { Component } from 'react';
-import Cards from "./Components/Cards"
-import Header from "./Components/Header"
-import Painel from "./Components/Painel"
-import Wrapper from "./Components/Wrapper"
+import { BrowserRouter as Router, Route } from "react-router-dom";
+
+// import Cards from "./components/pages/game/cards"
+import Header from "./components/common/header"
+import About from "./views/about";
+import Game from "./views/game";
+import Login from "./views/login";
+import Profile from "./views/profile";
+import Score from "./views/score";
+
+// import Painel from "./components/common/painel"
+// import Wrapper from "./components/game/wrapper"
 import cards from "./cards.json"
 
 import './App.scss';
 
 
-class App extends Component {
+export default class App extends Component {
 
   state = {
     cards,
     cardsOrder: []
   }
 
-  reorder = () => {
-    console.log('reorder')
+  componentDidMount = () => {
+
   }
 
   buildArray = () => {
@@ -29,29 +37,24 @@ class App extends Component {
       
     ));
 
-      console.log(this.state.cardsOrder)
   }
 
   
   render() {
     return (
-      <div className="container-fluid">
-       <Header />
-       <Painel />
-      <Wrapper>
-        {this.state.cards.map(card => (
-          <Cards 
-          id = {card.id}
-          name = {card.name}
-          image = {card.image}
-          />
-        ))}
-      </Wrapper>
-      {  this.buildArray() }
+      <Router>
+      <div>
+        <Header />
+        {/* <NavTabs /> */}
+        <Route exact path="/" component={Game} />
+        <Route exact path="/about" component={About} />
+        <Route exact path="/score" component={Score} />
+        <Route exact path="/game" component={Game} />
+        <Route path="/profile" component={Profile} />
+        <Route path="/login" component={Login} />
       </div>
+    </Router>
     );
   }
 }
 
-console.log(cards)
-export default App;
