@@ -7,7 +7,7 @@ export default class Game extends Component {
 
     state = {
         level: null,
-        deckSize: 3,
+        deckSize: 6,
         cards,
         deck: [],
         order: [],
@@ -49,7 +49,11 @@ export default class Game extends Component {
         temporaryValue = deck[currentIndex];
         deck[currentIndex] = deck[randomIndex];
         deck[randomIndex] = temporaryValue;
+
+        this.setState({ deck: deck})
     }
+
+
 
     console.log(deck)
     }
