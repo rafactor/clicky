@@ -22,6 +22,30 @@
   {
     "id": 6,
     "color": "purple"
+  },
+  {
+    "id": 7,
+    "color": "red-orange"
+  },
+  {
+    "id": 8,
+    "color": "yellow-orange"
+  },
+  {
+    "id": 9,
+    "color": "yellow-green"
+  },
+  {
+    "id": 10,
+    "color": "blue-green"
+  },
+  {
+    "id": 11,
+    "color": "blue-violet"
+  },
+  {
+    "id": 12,
+    "color": "red-violet"
   }
 ]
 

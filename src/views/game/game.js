@@ -13,6 +13,7 @@ export default class Game extends Component {
         order: [],
         selected: [],
         score: 0,
+        maxScore: 0,
         message: ""
     }
 
@@ -24,13 +25,10 @@ export default class Game extends Component {
 
     clickForm = (id) => {
         const selected =  this.state.selected
-        let score = this.state.score
 
         if (selected.indexOf(id) === -1) {
-            this.state.selected.push(id)
-            score++
-            this.setState({ score: score })
-            console.log(this.state.score)
+            this.rightClick(id)
+           
         } else {
             console.log('you lose')
             this.setState({ score: 0, message: "you lose!", selected: [] })
@@ -38,6 +36,21 @@ export default class Game extends Component {
         }
         
         this.sortDeck()
+    }
+
+    rightClick = (id) => {
+        let score = this.state.score;
+        let maxScore = this.state.maxScore;
+
+        this.state.selected.push(id);
+        score++
+
+        this.setState({ score: score, message: "good move!" })
+        
+        if (score > maxScore) {
+            this.setState({maxScore: score})
+        }
+
     }
 
     buildDeck = () => {
@@ -85,12 +98,22 @@ export default class Game extends Component {
         if (this.state.level === null) {
             return <Start startGame={this.startGame}  />
         } else {
-            return <Wrapper  
+            return (
+                <div>
+                <div className="header">
+                    <div className="header__title">Clicky Game</div>
+                    <p className="header__score">Current Score: {this.state.score} 
+                    <span className="header__maxScore">Max Score: {this.state.maxScore}</span>
+                    <span className="header__message">{this.state.message}</span></p>
+                </div>
+                     <Wrapper  
                             deck={this.state.deck}
                             level={this.state.level} 
                             sortDeck={this.sortDeck}
                             clickForm={this.clickForm}
                             />
+                </div>
+            )
         }
     }
 
@@ -98,9 +121,6 @@ export default class Game extends Component {
     render() {
         return (
             <div>
-                <div>
-                    <p>Score: {this.state.score}</p>
-                </div>
                 {this.renderPage()}
             </div>
         )

@@ -49,7 +49,7 @@ export default class App extends Component {
     return (
       <Router>
       <div>
-        <Header />
+        {/* <Header /> */}
         {/* <NavTabs /> */}
         <Route path="/game" component={Game} />
         {/* <Route path="/about" component={About} />

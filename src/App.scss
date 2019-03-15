@@ -12,3 +12,18 @@ body {
     font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
       monospace;
   }
+
+  .header{
+    width: 100%;
+    background-color: black;
+    color: white;
+
+    &__title {
+      font-size: 2em;
+      padding: 5px;
+    }
+
+    &__score {
+      padding: 5px 30px 5px 10px;
+    }
+  }
