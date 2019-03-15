@@ -7,12 +7,12 @@ import {
 
 // import Cards from "./components/pages/game/cards"
 import Header from "./components/common/header"
-import About from "./views/about";
-import Game from "./views/game";
-import Login from "./views/login";
+import About from "./views/about/about";
+import Game from "./views/game/game";
+import Login from "./views/login/login";
 // import PrivateRoute from "./components/auth/PrivateRoute"
 // import Profile from "./views/profile";
-import Score from "./views/score";
+import Score from "./views/score/score";
 
 // import Painel from "./components/common/painel"
 // import Wrapper from "./components/game/wrapper"
@@ -52,9 +52,9 @@ export default class App extends Component {
         <Header />
         {/* <NavTabs /> */}
         <Route path="/game" component={Game} />
-        <Route path="/about" component={About} />
+        {/* <Route path="/about" component={About} />
         <Route path="/score" component={Score} />
-        <Route path="/login" component={Login} />
+        <Route path="/login" component={Login} /> */}
       
       </div>
     </Router>

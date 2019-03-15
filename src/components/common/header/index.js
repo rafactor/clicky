@@ -22,25 +22,25 @@ export default class Header extends Component {
             <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
               <span className="navbar-toggler-icon"></span>
             </button>
-            <div className="collapse navbar-collapse" id="navbarNav">
+            {/* <div className="collapse navbar-collapse" id="navbarNav">
               <ul className="navbar-nav mr-auto">
-                <li className="nav-item active">
+                <li className="nav-item active"> */}
                 {/* <Link to="/about">About</Link> */}
                   {/* <a className="nav-link" href="#">About <span className="sr-only">(current)</span></a> */}
-                </li>
+                {/* </li>
                 <li className="nav-item">
-                <Link to="/score">Score</Link>
+                <Link to="/score">Score</Link> */}
                   {/* <a className="nav-link" href="#">Scores</a> */}
-                </li>
+                {/* </li>
                 <li className="nav-item">
-                <Link to="/profile">Profile</Link>
+                <Link to="/profile">Profile</Link> */}
                   {/* <a className="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Profile</a> */}
-                </li>
+                {/* </li>
               </ul>
               <span className="navbar-text">
               <Link to="/login">Login</Link>
               </span>
-            </div>
+            </div> */}
           </nav>
         )
     }

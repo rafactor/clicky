@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import Wrapper from "./wrapper"
-import Start from "./start"
+import Wrapper from "./wrapper/wrapper"
+import Start from "./start/start"
 import cards from "../../cards.json"
 
 export default class Game extends Component {
@@ -11,15 +11,33 @@ export default class Game extends Component {
         cards,
         deck: [],
         order: [],
-        selected: []
+        selected: [],
+        score: 0,
+        message: ""
     }
 
     componentDidMount = () => {
         this.setState({ level: null, deckSize: 3})
 
         this.buildDeck();
+    }
 
+    clickForm = (id) => {
+        const selected =  this.state.selected
+        let score = this.state.score
+
+        if (selected.indexOf(id) === -1) {
+            this.state.selected.push(id)
+            score++
+            this.setState({ score: score })
+            console.log(this.state.score)
+        } else {
+            console.log('you lose')
+            this.setState({ score: 0, message: "you lose!", selected: [] })
+
+        }
         
+        this.sortDeck()
     }
 
     buildDeck = () => {
@@ -29,7 +47,6 @@ export default class Game extends Component {
 
        this.state.deck.sort();
        
-      console.log(this.state.deck)
     //    .sort()?.log(deck)
     }
 
@@ -52,10 +69,6 @@ export default class Game extends Component {
 
         this.setState({ deck: deck})
     }
-
-
-
-    console.log(deck)
     }
 
     displayDeck = () => {
@@ -76,6 +89,7 @@ export default class Game extends Component {
                             deck={this.state.deck}
                             level={this.state.level} 
                             sortDeck={this.sortDeck}
+                            clickForm={this.clickForm}
                             />
         }
     }
@@ -84,6 +98,9 @@ export default class Game extends Component {
     render() {
         return (
             <div>
+                <div>
+                    <p>Score: {this.state.score}</p>
+                </div>
                 {this.renderPage()}
             </div>
         )
