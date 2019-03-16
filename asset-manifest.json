@@ -1,13 +1,13 @@
 {
-  "main.css": "/build/static/css/main.2995fd9a.chunk.css",
-  "main.js": "/build/static/js/main.a24f5332.chunk.js",
-  "main.js.map": "/build/static/js/main.a24f5332.chunk.js.map",
-  "runtime~main.js": "/build/static/js/runtime~main.cb13a552.js",
-  "runtime~main.js.map": "/build/static/js/runtime~main.cb13a552.js.map",
-  "static/js/2.22a35c99.chunk.js": "/build/static/js/2.22a35c99.chunk.js",
-  "static/js/2.22a35c99.chunk.js.map": "/build/static/js/2.22a35c99.chunk.js.map",
-  "index.html": "/build/index.html",
-  "precache-manifest.36234c7c06eba2035dc2923d51d638cd.js": "/build/precache-manifest.36234c7c06eba2035dc2923d51d638cd.js",
-  "service-worker.js": "/build/service-worker.js",
-  "static/css/main.2995fd9a.chunk.css.map": "/build/static/css/main.2995fd9a.chunk.css.map"
+  "main.css": "/clicky/static/css/main.644adeb5.chunk.css",
+  "main.js": "/clicky/static/js/main.d129f25f.chunk.js",
+  "main.js.map": "/clicky/static/js/main.d129f25f.chunk.js.map",
+  "runtime~main.js": "/clicky/static/js/runtime~main.e6823e1d.js",
+  "runtime~main.js.map": "/clicky/static/js/runtime~main.e6823e1d.js.map",
+  "static/js/2.22a35c99.chunk.js": "/clicky/static/js/2.22a35c99.chunk.js",
+  "static/js/2.22a35c99.chunk.js.map": "/clicky/static/js/2.22a35c99.chunk.js.map",
+  "index.html": "/clicky/index.html",
+  "precache-manifest.7a4470f56187235b33c4045b11d69594.js": "/clicky/precache-manifest.7a4470f56187235b33c4045b11d69594.js",
+  "service-worker.js": "/clicky/service-worker.js",
+  "static/css/main.644adeb5.chunk.css.map": "/clicky/static/css/main.644adeb5.chunk.css.map"
 }
