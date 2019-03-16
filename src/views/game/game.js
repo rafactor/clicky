@@ -15,7 +15,7 @@ export default class Game extends Component {
         score: 0,
         maxScore: 0,
         message: [
-            { level: 0, target: 0, message: "try to click only once in each color, without repeating"},
+            { level: 0, target: 6, message: "try to click only once in each color, without repeating"},
             { level: 1, target: 6, message: "try it again, without the labels"}
         ]
     }
@@ -36,8 +36,7 @@ export default class Game extends Component {
            
         } else {
             console.log('you lose')
-            this.setState({ score: 0, message: "you lose!", selected: [] })
-
+            this.setState({ score: 0, selected: [] })
         }
         
         this.sortDeck()
@@ -54,19 +53,36 @@ export default class Game extends Component {
 
         this.setState({ score: score})
         
+        console.log(score, target)
         if (score === target) {
+            console.log('next')
             this.nextPhase()
         } else if (score > maxScore) {
+            console.log('increment')
             this.setState({maxScore: score})
         }
 
     }
 
     nextPhase = () => {
+        const levels = this.state.message.length
         let level = this.state.level
-        level++
 
-        this.setState({ level: level, selected: [], maxScore: 0 })
+        if ( levels === level) {
+            this.completeGame()
+        } else {
+            level++
+            this.setState({ level: level, selected: [], maxScore: 0 })
+        }
+    }
+
+    completeGame = () => {
+        let message = `Contratulations! You completed all available phases. 
+                           More complex challenges are comming soon`
+        
+
+        this.setState({ level: 0, selected: [], message: message })
+
     }
 
     buildDeck = () => {

@@ -14,7 +14,8 @@ export default class Wrapper extends Component {
             <Card color={card.color} 
                   id={card.id}
                   key={card.key}
-                  clickForm={this.props.clickForm}                  
+                  clickForm={this.props.clickForm}   
+                  level={this.props.level}               
           />
       ))}
       
