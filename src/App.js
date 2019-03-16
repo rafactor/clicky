@@ -52,8 +52,8 @@ export default class App extends Component {
         {/* <Header /> */}
         {/* <NavTabs /> */}
         <Route path="/game" component={Game} />
-        {/* <Route path="/about" component={About} />
-        <Route path="/score" component={Score} />
+        <Route path="/" component={Game} />
+        {/* <Route path="/score" component={Score} />
         <Route path="/login" component={Login} /> */}
       
       </div>

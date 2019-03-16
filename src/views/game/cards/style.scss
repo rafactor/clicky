@@ -3,34 +3,33 @@
 .clicky-card {
 
     // height: 8rem;
-    width: 10rem;
-    height: 10rem;
-    width: 30.5%;
-    // border: 1px solid black;
-    padding: auto;
-    margin-bottom: 1rem;
-    border-radius: 5px;
-    position: relative;
+    width: 50vw;
+    height: 20vh;
+    border: 1px solid white;
+    // padding: auto;
+    // margin-bottom: 1rem;
+    // border-radius: 5px;
+    // position: relative;
     
     &__text {
-        width: 100%;
-        height: 2rem;
+        // width: 100%;
+        // height: 2rem;
         // background-color: gray;
-        text-align: center;
+        // text-align: center;
         color: white;
-        position: absolute;
-        bottom: 50%;
-        font-size: 2em;
+        // position: absolute;
+        // bottom: 50%;
+        // font-size: 2em;
         // right: 50%;
         
     }
 
     &__wrapper {
         // max-width: 18rem;
-        width: 30%;
-        border: 1px solid black;
-        padding: auto;
-        margin: 0.2rem;
+        // width: 30%;
+        // border: 1px solid black;
+        // padding: auto;
+        // margin: 0.2rem;
     }
 
     &--red {

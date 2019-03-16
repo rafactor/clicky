@@ -6,24 +6,64 @@ body {
       sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-  }
+    position: absolute;
+    background-color: black !important;
+    width: 100vw;
+    height: 100vh;
+}
   
-  code {
+code {
     font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
       monospace;
-  }
+}
 
-  .header{
-    width: 100%;
+.clicky-header{
+    width: 100vw;
     background-color: black;
     color: white;
+    text-align: center;
+    padding: 0 15px;
 
     &__title {
       font-size: 2em;
       padding: 5px;
+      text-align: center;
     }
 
-    &__score {
-      padding: 5px 30px 5px 10px;
+    &__subline {
+      background-color: rgba($color: black, $alpha: 0.8)
+    }
+
+    &__maxScore {
+      text-align: center;
+    }
+
+    &__message {
+      text-align: center;
+      width: 100%;
+      background-color:  rgba($color: lightgrey , $alpha: 1);
+      height: 100px;
     }
   }
+
+.start-painel {
+  // position: relative;
+  height: 100vh;
+  position: relative;
+  width: 100vw;
+  background-color: black;
+  
+
+  &__title {
+    position: absolute;
+    width: 100%;
+    top: 40%;
+    text-align: center;
+    color: white;
+ 
+  }
+}
+
+.clicky-center{
+  text-align: center;
+}

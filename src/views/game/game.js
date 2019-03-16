@@ -14,8 +14,13 @@ export default class Game extends Component {
         selected: [],
         score: 0,
         maxScore: 0,
-        message: ""
+        message: [
+            { level: 0, target: 0, message: "try to click only once in each color, without repeating"},
+            { level: 1, target: 6, message: "try it again, without the labels"}
+        ]
     }
+
+    
 
     componentDidMount = () => {
         this.setState({ level: null, deckSize: 3})
@@ -39,18 +44,29 @@ export default class Game extends Component {
     }
 
     rightClick = (id) => {
+        let level = this.state.level
         let score = this.state.score;
         let maxScore = this.state.maxScore;
+        let target = this.state.message[level].target;
 
         this.state.selected.push(id);
         score++
 
-        this.setState({ score: score, message: "good move!" })
+        this.setState({ score: score})
         
-        if (score > maxScore) {
+        if (score === target) {
+            this.nextPhase()
+        } else if (score > maxScore) {
             this.setState({maxScore: score})
         }
 
+    }
+
+    nextPhase = () => {
+        let level = this.state.level
+        level++
+
+        this.setState({ level: level, selected: [], maxScore: 0 })
     }
 
     buildDeck = () => {
@@ -95,16 +111,23 @@ export default class Game extends Component {
     }
 
     renderPage = () => {
+        let level = this.state.level * 1
+        let message = this.state.message[level].message;
+
         if (this.state.level === null) {
             return <Start startGame={this.startGame}  />
         } else {
             return (
                 <div>
-                <div className="header">
-                    <div className="header__title">Clicky Game</div>
-                    <p className="header__score">Current Score: {this.state.score} 
-                    <span className="header__maxScore">Max Score: {this.state.maxScore}</span>
-                    <span className="header__message">{this.state.message}</span></p>
+                <div className="clicky-header">
+                    <div className="clicky-header__title">Clicky Game</div>
+                    <div className="clicky-header__subline row">
+                        <div className="clicky-header__score clicky-center col s6"> Current Score: {this.state.score} </div>
+                        <div className="clicky-header__maxScore clicky-center col s6">Max Score: {this.state.maxScore}</div>
+                        <span className="clicky-header__message"><strong>{`Level: ${level}`}</strong><br/>{message}</span>
+                        
+                    </div>
+                    
                 </div>
                      <Wrapper  
                             deck={this.state.deck}

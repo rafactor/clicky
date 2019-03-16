@@ -1,13 +1,17 @@
 import React from "react";
-import "./style.scss"
 
 export default function Start(props){
         return (
-        <div className="clicky-card__painel">
-        <h1>Clicky Game</h1>
-        <div>
-            <p>Press Start to Begin</p>
-            <button name="start" value="start" onClick={() => props.startGame()}>Start</button>
+            <div className="start-painel">
+
+        <div className="start-painel__title"
+        onClick={() => props.startGame()}>
+            <h1>Clicky Game</h1>
+            <div>
+                <p>Test your memory!</p>
+                <hr/>
+                <p>Press to Start</p>
+            </div>
         </div>
         </div>
         )
